@@ -1,4 +1,4 @@
-<mat-tab-group headerPosition="below" style="height:100%;">
+<mat-tab-group *ngIf="isSmallScreen" headerPosition="below" class="my-tab-group">
   <mat-tab>
     <ng-template mat-tab-label>
       <div class="col" class="my-tab-icon">
@@ -8,7 +8,7 @@
         </div>
       </div>
     </ng-template>
-     Content 1 
+      <app-briefcase></app-briefcase>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </ng-template>
-     Content 2 
+    <app-detail></app-detail>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
@@ -30,7 +30,7 @@
         </div>
       </div>
     </ng-template>
-     Content 3 
+    <app-history></app-history>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
@@ -41,6 +41,9 @@
         </div>
       </div>
     </ng-template>
-     Content 4 
+    <app-personal></app-personal>
   </mat-tab>
 </mat-tab-group>
+<div *ngIf="!isSmallScreen">
+web view
+</div>

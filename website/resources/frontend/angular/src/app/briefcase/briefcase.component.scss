@@ -1,0 +1,38 @@
+.briefcase{
+    vertical-align: middle;
+    color: silver;
+}
+.pie-center{
+    position: absolute;
+    top:43%;
+    left: 39%;
+    text-align: center;
+}
+.account-balance{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 35px;
+}
+.earned-value{
+    margin-top: 15px;
+    text-align: center;
+    .pl{
+        color: gray;
+    }
+    .val{
+        color: lightgreen;
+    }
+}
+.initial-balance{
+
+    margin-top: 35px;
+    text-align: center;
+    .initial-balance-val
+    {
+        font-size: 25px;
+    }
+    .initial-balance-letter{
+        margin-top: 15px;
+        font-size: 11px;
+    }
+}

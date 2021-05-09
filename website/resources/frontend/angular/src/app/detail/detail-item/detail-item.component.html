@@ -1,0 +1,26 @@
+<div class="detail-item col">
+    <div>
+        Producto: {{data.Producto}}
+    </div>
+    <div [style]="barStyle" (click)="onDetailView()">
+        <span>{{data.Rotaje}}%</span>
+    </div>
+    <div>
+        Estado: {{data.Estado}}
+    </div>
+    <div>
+        Derivado: {{data.Derivado}}
+    </div>
+    <div>
+        Saldo Actual: <span style="color: limegreen;">${{data.SaldoActual}}</span>
+    </div>
+    <div>
+        Inversion: ${{data.Inversion}}
+    </div>
+    <div>
+        Margen Mantenimiento: ${{data.MargenMantenimiento}}
+    </div>
+    <div>
+        Beneficio/Perdida: <span style="color: limegreen;">${{data.BeneficioPerdida}}</span> (<span style="color: limegreen;">{{data.percent}}%</span>)
+    </div>
+</div>
