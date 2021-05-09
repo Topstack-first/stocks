@@ -12,8 +12,9 @@ export class HistoryComponent implements OnInit {
   ngOnInit(): void {
     this.data = this.originData;
   }
-  search(searchStr:any)
+  search(event:any)
   {
+    let searchStr:any = event.target.value;
     this.data = this.originData.filter((item)=>{
       return item.BeneficioPerdida.includes(searchStr);
     });
