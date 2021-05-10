@@ -1,0 +1,60 @@
+<mat-sidenav-container class="back-color">
+    <div class="padding-3 body-list">
+        <app-detail-item *ngFor="let item of data" [data]="item" [parentView]="this" [detailView]="detailView"></app-detail-item>
+    </div>
+    <div [class]="isSmallScreen?'bottom-info padding-3':'bottom-info-desktop padding-3'" (click)="test()">
+        <div class="bottom-info-content">
+            RESUMEN:<br>
+            <div class="row detail-bottom-font-size">
+                <div class="col col-5">Inversion:</div>
+                <div class="col col-5">$ 1000000.00:</div>
+                <div class="col col-2">(<span style="color: rgb(43, 119, 241);">90%</span>)</div>
+            </div>
+            <div class="row detail-bottom-font-size">
+                <div class="col col-5">Garantias disponibles:</div>
+                <div class="col col-5">$ 10000.00:</div>
+                <div class="col col-2">(<span style="color: rgb(43, 119, 241);">10%</span>)</div>
+            </div>
+            <div class="row detail-bottom-font-size">
+                <div class="col col-5">Beneficio/Perdida:</div>
+                <div class="col col-5">$ 12000.00:</div>
+                <div class="col col-2">(<span style="color:limegreen;">12%</span>)</div>
+            </div>
+        </div>
+        
+    </div>
+    <mat-sidenav #detailView position="end" class="detail-sidenav">
+        <div *ngIf="detailItem == null" >
+            No selceted Item!
+        </div>
+        <div *ngIf="detailItem != null"  class="detail-view col">
+            <div style="color: #d063ff;">
+                {{detailItem.Producto}}
+            </div>
+            <div>
+                ESTADO: <span style="color: goldenrod;">{{detailItem.Estado}}</span>
+            </div>
+            <div>
+                LOTAJE: {{detailItem.Rotaje}}
+            </div>
+            <div>
+                L/S(LONG/SHORT): <span style="color: goldenrod;">{{detailItem.LS}}</span>
+            </div>
+            <div>
+                PRECIO APERTURA: <span style="color: rgb(4, 146, 241);">{{detailItem.PercioApertura}}</span>
+            </div>
+            <div>
+                META (TAKE PROFIT): <span style="color: rgb(4, 146, 241);">{{detailItem.Meta}}</span>
+            </div>
+            <div>
+                STOP/LOST: {{detailItem.StopLost}}%
+            </div>
+            <div>
+                FECHA APERTURA: {{detailItem.FechaApertura}}
+            </div>
+            <div>
+                NUMERO ORDEN: <span style="color: limegreen;">{{detailItem.NumeroOrden}}</span>
+            </div>
+        </div>
+    </mat-sidenav>
+</mat-sidenav-container>

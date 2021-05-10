@@ -1,0 +1,31 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="briefcase centered">
+    <div class="account-balance">
+        $16134.65
+    </div>
+    <div class="earned-value">
+        <span class="pl">P/L:  </span>
+        <span class="val">+3536.71(+28.07%)</span>
+    </div>
+    <div class="initial-balance">
+        <div class="initial-balance-val">
+            $8123.45
+        </div>
+        
+        <div class="initial-balance-letter">
+            SALDO INICIAL
+        </div>
+    </div>
+    <div style="width: 100%;height: 330px;">
+        <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="data"
+            [legend]="showLegend"
+            [explodeSlices]="explodeSlices"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+            [arcWidth]="0.5"
+            (select)="onSelect($event)">
+        </ngx-charts-pie-chart>  
+    </div>
+</div>

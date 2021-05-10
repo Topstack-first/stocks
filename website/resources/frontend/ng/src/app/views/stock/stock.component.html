@@ -1,0 +1,47 @@
+<mat-tab-group [headerPosition]="isSmallScreen?'below':'top'" class="my-tab-group" animationDuration="0ms">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div [class]="isSmallScreen?'col my-tab-icon':'row my-tab-row'">
+        <mat-icon>work</mat-icon>
+        <div>
+          Portafolio
+        </div>
+      </div>
+    </ng-template>
+      <app-briefcase></app-briefcase>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div [class]="isSmallScreen?'col my-tab-icon':'row my-tab-row'">
+        <mat-icon>leaderboard</mat-icon>
+        <div>
+          Detalle
+        </div>
+      </div>
+    </ng-template>
+    <app-detail [isSmallScreen]="isSmallScreen"></app-detail>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div [class]="isSmallScreen?'col my-tab-icon':'row my-tab-row'">
+        <mat-icon>dashboard</mat-icon>
+        <div>
+          Historico
+        </div>
+      </div>
+    </ng-template>
+    <app-history></app-history>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div [class]="isSmallScreen?'col my-tab-icon':'row my-tab-row'">
+        <mat-icon>manage_accounts</mat-icon>
+        <div>
+          Personal
+        </div>
+      </div>
+    </ng-template>
+    <app-personal></app-personal>
+  </mat-tab>
+</mat-tab-group>
+

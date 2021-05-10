@@ -1,0 +1,46 @@
+.detail-bottom-font-size
+{
+    font-size: 0.8em;
+}
+.bottom-info{
+    position:fixed;
+    bottom: 49px;
+    width: 100%;
+    background-color: #101010;
+    color: silver;
+    .bottom-info-content{
+        max-width: 600px;
+        margin:auto;
+    }
+    
+}
+.bottom-info-desktop
+{
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #101010;
+    color: silver;
+    .bottom-info-content{
+        max-width: 600px;
+        margin:auto;
+    }
+}
+.padding-3{
+    padding: 3px;
+}
+.body-list{
+    margin: 15px;
+    margin-bottom: 120px;
+    color: silver;
+}
+.back-color{
+    background-color: #101010;
+}
+.detail-view{
+    padding: 10px;
+    min-width: 60%;
+}
+.detail-sidenav{
+    position: fixed;
+}

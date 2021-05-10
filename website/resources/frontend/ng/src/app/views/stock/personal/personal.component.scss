@@ -1,0 +1,57 @@
+$sidenav-user-block-height: 156px;
+.user-block{
+    //height: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #3e3d3d;
+
+    position: relative;  
+    z-index: 1; 
+    overflow: hidden;  
+    img{
+        width: 80px; 
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;       
+    }
+    .user-info-wrapper{
+        padding: 0 6px;
+        margin: 6px 0;
+        width: 100%;
+        .user-info{
+            text-align: center;
+            .name{
+                font-size: 15px
+            }
+            .position{
+                font-size: 13px;
+            }
+        }
+    } 
+    &.show{
+        height: $sidenav-user-block-height;
+    }      
+}
+.cuenta{
+    color: silver;
+    margin: 15px;
+    padding: 10px;
+    background-color: #3e3d3d;
+}
+.personal-layout{
+    padding: 15px;
+    
+}
+.edit-btn{
+    margin-top: 25px;
+    font-size: 1.5em;
+}
+.mercado{
+    margin-top: 25px;
+    font-size: 1.5em;
+    color: rgb(4, 146, 241);
+}
+.mail{
+    margin-top: 25px;
+    font-size: 1.5em;
+    color: #8bc34a;
+}
