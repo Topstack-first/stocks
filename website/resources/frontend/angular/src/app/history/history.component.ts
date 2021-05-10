@@ -19,6 +19,7 @@ export class HistoryComponent implements OnInit {
       return item.BeneficioPerdida.includes(searchStr);
     });
   }
+  
   data:any;
   originData:HistoryItem[]= [
     {

@@ -9,14 +9,17 @@ import { DetailItem } from './detail-item';
 export class DetailItemComponent implements OnInit {
   @Input()
   data:DetailItem | any;
+  @Input() onDetailView:any;
+  @Input()
+  detailView:any;
   constructor() { }
 
   barStyle:string = "";
   ngOnInit(): void {
     this.barStyle = "background-color: limegreen;width: 80%;text-align:center;";
   }
-  onDetailView()
+  onDetailParentView()
   {
-    alert("clicked!");
+    this.onDetailView(this.data,this.detailView);
   }
 }

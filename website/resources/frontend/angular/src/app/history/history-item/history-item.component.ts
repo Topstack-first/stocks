@@ -9,7 +9,7 @@ export class HistoryItemComponent implements OnInit {
   @Input()
   data:any;
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

@@ -3,8 +3,8 @@
     font-size: 0.8em;
 }
 .bottom-info{
-    position:absolute;
-    bottom: 0px;
+    position:fixed;
+    bottom: 49px;
     width: 100%;
     background-color: #101010;
     color: silver;
@@ -16,4 +16,11 @@
     margin: 15px;
     margin-bottom: 120px;
     color: silver;
+}
+.back-color{
+    background-color: #101010;
+}
+.detail-view{
+    padding: 10px;
+    min-width: 60%;
 }

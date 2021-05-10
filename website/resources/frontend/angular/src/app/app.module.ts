@@ -7,6 +7,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import {LayoutModule} from '@angular/cdk/layout';
 import { BriefcaseComponent } from './briefcase/briefcase.component';
@@ -35,7 +37,8 @@ import { HistoryItemComponent } from './history/history-item/history-item.compon
     LayoutModule,
     NgxChartsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

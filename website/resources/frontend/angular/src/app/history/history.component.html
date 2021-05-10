@@ -2,10 +2,11 @@
     <mat-form-field class="search-form">
         <mat-label>Search</mat-label>
         <mat-icon matPrefix>search</mat-icon>
-        <input matInput (keyup)="search($event)"  placeholder="search string">
+        <input matInput (keyup)="search($event)" placeholder="search string">
         <mat-icon matSuffix>settings</mat-icon>
-      </mat-form-field>
+    </mat-form-field>
 </div>
 <div class="padding-3 history-list">
-    <app-history-item *ngFor="let item of data" [data]="item"></app-history-item>
+    <app-history-item *ngFor="let item of data" [data]="item">
+    </app-history-item>
 </div>
