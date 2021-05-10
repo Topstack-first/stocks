@@ -17,7 +17,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "progress": false,
-            "outputPath": "../../../public/assets/angular",
+            "outputPath": "dist/assets/angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -44,8 +44,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputPath": "../../../public/assets/angular",
-              "deployUrl": "/assets/angular/",
+              "outputPath": "dist/assets/angular",
+              "deployUrl": "/asssets/angular/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -61,8 +61,8 @@
               ]
             },
             "dev": {
-              "outputPath": "dist/assets/angular",
-              "baseHref": "/assets/angular/"
+              "outputPath": "dist",
+              "baseHref": "/"
             }
           }
         },

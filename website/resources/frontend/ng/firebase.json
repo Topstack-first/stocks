@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "CORE",
+      "target": "Stock",
       "public": "dist",
       "ignore": [
         "**/.*"
@@ -20,12 +20,9 @@
       "rewrites": [
         {
           "source": "**",
-          "function": "ssr"
+          "destination": "/index.html"
         }
       ]
     }
-  ],
-  "functions": {
-    "source": "."
-  }
+  ]
 }

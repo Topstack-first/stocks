@@ -1,9 +1,9 @@
 {
   "targets": {
-    "mockup-a5897": {
+    "stock-web-mobile": {
       "hosting": {
-        "CORE": [
-          "mockup-a5897"
+        "Stock": [
+          "stock-web-mobile"
         ]
       }
     }

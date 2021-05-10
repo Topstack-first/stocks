@@ -1,0 +1,82 @@
+<div class="solicitud">
+    <button mat-raised-button class="back-btn" (click)="toDashboard()">
+    Back
+    </button>
+    <div fxLayout="column" style="color: silver;">
+        <mat-icon style="color: goldenrod;margin: auto;font-size: 2em;margin-top: 10px;">report_problem</mat-icon>
+        <div style="padding-top: 10px;">
+            Tiempo de liberación de fondos de 15 a 30 días, por revisiór múltiple de cada transacció por parte del Exchange y su departamento de arbitraje
+        </div>
+        <mat-checkbox style="margin-top: 10px;font-size: x-small;" required>Entiendo lo anteriormente mencionado sobre los periodos de retiro</mat-checkbox>
+        <mat-form-field style="margin-top: 10px;" appearance="fill">
+            <mat-label>Seleccione Moneda</mat-label>
+            <select matNativeControl required>
+              <option value="usd">USD</option>
+              <option value="euro">EURO</option>
+              <option value="gbp">GBP</option>
+            </select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Monto USD</mat-label>
+            <input matInput placeholder="input monto" value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Comentario</mat-label>
+            <textarea matInput placeholder="input comentario..."></textarea>
+        </mat-form-field>
+        <div style="text-align: left;font-size: large;border-top: 1px solid black;padding-top: 8px;">
+            Detalles de Cuenta (Beneficiario)
+        </div>
+        <div style="text-align: left;border-bottom: 1px solid black;padding-bottom: 8px;">
+            Detalles de la cuenta a la que quiere transferir
+        </div>
+        <mat-form-field>
+            <mat-label>Número de Cuenta</mat-label>
+            <input matInput placeholder="" value="" required>
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <mat-form-field style="width: 35%;">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="" value="" required>
+            </mat-form-field>
+            <mat-form-field style="width: 45%;">
+                <mat-label>Apellido</mat-label>
+                <input matInput placeholder="" value="" required>
+            </mat-form-field>
+        </div>
+        <mat-form-field>
+            <mat-label>Dirección</mat-label>
+            <input matInput placeholder="" value="" required>
+        </mat-form-field>
+        <div style="text-align: left;font-size: large;border-top: 1px solid black;padding-top: 8px;">
+            Banco Beneficiario
+        </div>
+        <div style="text-align: left;border-bottom: 1px solid black;padding-bottom: 8px;">
+            Información del banco que recibe los fondos
+        </div>
+        <mat-form-field style="width: 82%;">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre del Banco" value="" required>
+        </mat-form-field>
+        <mat-form-field style="width: 75%;">
+            <mat-label>Swift</mat-label>
+            <input matInput placeholder="" value="" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Dirección</mat-label>
+            <input matInput placeholder="" value="" required>
+        </mat-form-field>
+        <mat-icon style="color: goldenrod;margin: auto;font-size: 2em;margin-top: 10px;">report_problem</mat-icon>
+        <div style="margin-top: 15px;font-size: small; text-align:justify;">
+            Acepto (amos) y reconozco (reconocemos) que es posible que un banco 
+            corresponsal u otra entidad financiera que intervenga en la transferencia/giro por 
+            mi (nosotros) solicitando o requerido, sea de mi pais o del exterior, 
+            queda rechazar la transferencia/giro y/o retener, bloquear, penalizar y/o 
+            congelar los fondos objeto de la solicitud en cumplimiento de las normas 
+            que le sean aplicables (lavado de activos AML, OFAC, ONU, etc) y exonero 
+            (exoneramos) de responsabilidad a La empresa y a los bancos que se utilicen 
+            para las transferencias respectivas, en los maximos termino adminitidos por 
+            la ley aplicable, por cualquier perjuicio que dichas acciones quedan ocacionarme ( ocacionarnos).
+        </div>
+    </div>
+</div>

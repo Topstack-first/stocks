@@ -1,0 +1,41 @@
+<div class="profile">
+    <button mat-raised-button class="back-btn" (click)="toDashboard()" >
+        Back
+    </button>
+    <div style="color: silver;margin-top: 50px;margin-bottom: 20px;">
+        <button mat-raised-button class="back-btn" (click)="uploadFile.click()" style="margin-bottom: 10px;">
+            Replace photo ...
+        </button>
+        <input hidden #uploadFile id="singleFile" type="file" [fileUploadInputFor]= "fileUploadQueue"/>
+
+        <br>
+        <mat-file-upload-queue #fileUploadQueue style="margin-top: 10px;"
+            [fileAlias]="'file'"
+            [httpUrl]="'http://localhost:8180/jax-rs-jersey-application-sample'">
+
+            <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
+        </mat-file-upload-queue>
+    </div>
+
+    <mat-form-field style="width: 100%;max-width: 400px;">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%;max-width: 400px;">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="input password" value="">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;max-width: 400px;">
+        <mat-label>Confirm</mat-label>
+        <input matInput type="password" placeholder="input password" value="">
+    </mat-form-field>
+    <button mat-raised-button class="back-btn">
+        Save
+    </button>
+</div>

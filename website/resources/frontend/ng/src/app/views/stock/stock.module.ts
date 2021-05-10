@@ -13,6 +13,9 @@ import { DetailItemComponent } from './detail/detail-item/detail-item.component'
 import { HistoryItemComponent } from './history/history-item/history-item.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SolicitudComponent } from './solicitud/solicitud.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { MatFileUploadModule } from 'angular-material-fileupload';
 @NgModule({
   declarations: [
     StockComponent,
@@ -21,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HistoryComponent,
     PersonalComponent,
     DetailItemComponent,
-    HistoryItemComponent
+    HistoryItemComponent,
+    SolicitudComponent,
+    EditProfileComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StockRoutingModule,
     LayoutModule,
     NgxChartsModule,
-    SharedModule
+    SharedModule,
+    MatFileUploadModule
   ],
   providers: [],
   bootstrap: [StockComponent]
