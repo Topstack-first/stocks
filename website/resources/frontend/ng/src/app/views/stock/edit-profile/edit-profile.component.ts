@@ -18,6 +18,6 @@ export class EditProfileComponent implements OnInit {
   }
   toDashboard()
   {
-    this.router.navigate(["/"]);
+    this.router.navigate(["/stock"]);
   }
 }

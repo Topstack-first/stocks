@@ -14,6 +14,6 @@ export class SolicitudComponent implements OnInit {
   }
   toDashboard()
   {
-    this.router.navigate(["/"]);
+    this.router.navigate(["/stock"]);
   }
 }

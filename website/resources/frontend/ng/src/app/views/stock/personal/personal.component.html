@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="center center" class="centered">
-    <div fxLayout="column" fxLayoutAlign="center center" class="user-block transition-2"> 
-        <div [fxLayout]="'row'" 
+    <div fxLayout="column" fxLayoutAlign="center center" class="user-block transition-2">
+        <div [fxLayout]="'row'"
              [fxLayoutAlign]="'space-around center'" class="user-info-wrapper">
             <img [src]="'/assets/angular/assets/img/users/'+personalData.image" alt="user-image">
             <div class="user-info">
@@ -13,7 +13,7 @@
             <a mat-icon-button routerLink="/mailbox">
                 <mat-icon>mail_outline</mat-icon>
             </a>
-            <a mat-icon-button routerLink="/login">
+            <a mat-icon-button (click)="signOut()">
                 <mat-icon>power_settings_new</mat-icon>
             </a>
         </div>

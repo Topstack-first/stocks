@@ -1,16 +1,16 @@
 <div fxLayout="column" fxLayoutAlign="center center" class="briefcase centered">
     <div class="account-balance">
-        $16134.65
+        ${{investerInfo != null ? investerInfo.account_balance : '0.00' }}
     </div>
     <div class="earned-value">
         <span class="pl">P/L:  </span>
-        <span class="val">+3536.71(+28.07%)</span>
+        <span class="val">{{calcStr}}</span>
     </div>
     <div class="initial-balance">
         <div class="initial-balance-val">
-            $8123.45
+            ${{investerInfo != null ? investerInfo.open_balance : '0.00'}}
         </div>
-        
+
         <div class="initial-balance-letter">
             SALDO INICIAL
         </div>
@@ -26,6 +26,6 @@
             [gradient]="gradient"
             [arcWidth]="0.5"
             (select)="onSelect($event)">
-        </ngx-charts-pie-chart>  
+        </ngx-charts-pie-chart>
     </div>
 </div>
