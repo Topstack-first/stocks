@@ -2,7 +2,7 @@
     <button mat-raised-button class="back-btn" (click)="toDashboard()">
     Back
     </button>
-    <div fxLayout="column" style="color: silver;">
+    <form fxLayout="column" style="color: silver;" (ngSubmit)="onSubmit()">
         <mat-icon style="color: goldenrod;margin: auto;font-size: 2em;margin-top: 10px;">report_problem</mat-icon>
         <div style="padding-top: 10px;">
             Tiempo de liberación de fondos de 15 a 30 días, por revisiór múltiple de cada transacció por parte del Exchange y su departamento de arbitraje
@@ -66,17 +66,18 @@
             <mat-label>Dirección</mat-label>
             <input matInput placeholder="" value="" required>
         </mat-form-field>
+        <button mat-raised-button type="submit" class="back-btn">Submit</button>
         <mat-icon style="color: goldenrod;margin: auto;font-size: 2em;margin-top: 10px;">report_problem</mat-icon>
         <div style="margin-top: 15px;font-size: small; text-align:justify;">
-            Acepto (amos) y reconozco (reconocemos) que es posible que un banco 
-            corresponsal u otra entidad financiera que intervenga en la transferencia/giro por 
-            mi (nosotros) solicitando o requerido, sea de mi pais o del exterior, 
-            queda rechazar la transferencia/giro y/o retener, bloquear, penalizar y/o 
-            congelar los fondos objeto de la solicitud en cumplimiento de las normas 
-            que le sean aplicables (lavado de activos AML, OFAC, ONU, etc) y exonero 
-            (exoneramos) de responsabilidad a La empresa y a los bancos que se utilicen 
-            para las transferencias respectivas, en los maximos termino adminitidos por 
+            Acepto (amos) y reconozco (reconocemos) que es posible que un banco
+            corresponsal u otra entidad financiera que intervenga en la transferencia/giro por
+            mi (nosotros) solicitando o requerido, sea de mi pais o del exterior,
+            queda rechazar la transferencia/giro y/o retener, bloquear, penalizar y/o
+            congelar los fondos objeto de la solicitud en cumplimiento de las normas
+            que le sean aplicables (lavado de activos AML, OFAC, ONU, etc) y exonero
+            (exoneramos) de responsabilidad a La empresa y a los bancos que se utilicen
+            para las transferencias respectivas, en los maximos termino adminitidos por
             la ley aplicable, por cualquier perjuicio que dichas acciones quedan ocacionarme ( ocacionarnos).
         </div>
-    </div>
+    </form>
 </div>

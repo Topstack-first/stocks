@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\State;
-class CreateStatesTable extends Migration
+use App\Models\RequestType;
+
+class CreateRequestTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +14,17 @@ class CreateStatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('states', function (Blueprint $table) {
+        Schema::create('request_types', function (Blueprint $table) {
             $table->id();
             $table->string("name");
             $table->timestamps();
         });
-        $states = array(
-            array("name"=>"ACTIVO"),
-            array("name"=>"MERCADO"),
-            array("name"=>"CERRADO"),
-            array("name"=>"HOLD"),
-            array("name"=>"VENDIDO"),
+        $requesttypes = array(
+            array("name"=>"Aumento Capital"),
+            array("name"=>"Retiro Capital"),
         );
-        foreach ($states as $state) {
-            State::firstOrCreate($state);
+        foreach ($requesttypes as $requesttype) {
+            RequestType::firstOrCreate($requesttype);
         }
     }
 
@@ -37,6 +35,6 @@ class CreateStatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('states');
+        Schema::dropIfExists('request_types');
     }
 }

@@ -14,6 +14,8 @@ export class DataService {
   getInvester(id:any): Observable<any> {
     return this.http.get('http://127.0.0.1:8000/api/investers/'+id);
   }
-
+  sendTransaction(data:any): Observable<any> {
+    return this.http.post('http://127.0.0.1:8000/api/transactions', data);
+  }
 }
 

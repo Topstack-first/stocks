@@ -24,6 +24,9 @@ Route::group([
     Route::get('user-profile', 'AuthController@userProfile');
 });
 Route::middleware(['auth'])->group(function () {
+    Route::get('/states', 'TypesController@states');
+    Route::get('/requestTypes', 'TypesController@requestTypes');
+
     Route::get('/investers', 'UserController@index');
     Route::get('/investers/{id}', 'UserController@user');
     Route::post('/investers', 'UserController@store');
