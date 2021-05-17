@@ -14,6 +14,7 @@ import { AuthStateService } from '../../shared/auth-state.service';
 export class SigninComponent implements OnInit {
   loginForm: FormGroup;
   errors = null;
+  goToWebAdmin:boolean = false;
 
   constructor(
     public router: Router,
@@ -27,7 +28,11 @@ export class SigninComponent implements OnInit {
       password: []
     })
   }
+  goToAdmin()
+  {
 
+    this.goToWebAdmin = ! this.goToWebAdmin;
+  }
   ngOnInit() { }
 
   onSubmit() {
@@ -40,7 +45,15 @@ export class SigninComponent implements OnInit {
         },() => {
           this.authState.setAuthState(true);
           this.loginForm.reset();
-          this.router.navigate(['stock']);
+
+          if(this.goToWebAdmin)
+          {
+            this.router.navigate(['webadmin']);
+          }
+          else{
+            this.router.navigate(['stock']);
+          }
+
         }
       );
   }

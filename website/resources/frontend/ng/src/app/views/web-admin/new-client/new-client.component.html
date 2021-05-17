@@ -1,0 +1,74 @@
+<div class="new-client">
+    <button mat-raised-button class="back-btn" (click)="gotoBack()">
+    Back
+    </button>
+    <form fxLayout="column" style="color: silver;" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput value="" required>
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <mat-form-field style="width: 35%;">
+                <mat-label>Apellido 1</mat-label>
+                <input matInput placeholder="" value="" required>
+            </mat-form-field>
+            <mat-form-field style="width: 45%;">
+                <mat-label>Apellido 2</mat-label>
+                <input matInput placeholder="" value="" required>
+            </mat-form-field>
+        </div>
+        <mat-form-field>
+            <mat-label>Tipo Documento</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Número Documento</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Nacionalidad</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Pais de Residencia</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Fecha nacimiento</mat-label>
+            <input type="date" matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Direccion</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefono</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>PassWord</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Numero Cuenta</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Fecha Apertura Cuenta</mat-label>
+            <input type="date" matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Saldo Inicial</mat-label>
+            <input matInput value="">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Fecha Ultima Solicitud de Fondos</mat-label>
+            <input type="date" matInput value="">
+        </mat-form-field>
+        <button mat-raised-button type="submit" class="back-btn">Submit</button>
+    </form>
+</div>

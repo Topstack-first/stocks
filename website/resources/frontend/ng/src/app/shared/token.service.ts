@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { config } from './config';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,8 @@ import { Injectable } from '@angular/core';
 export class TokenService {
 
   private issuer = {
-    login: 'http://127.0.0.1:8000/api/auth/login',
-    register: 'http://127.0.0.1:8000/api/auth/register'
+    login: config.API_BASE_URL+ '/api/auth/login',
+    register: config.API_BASE_URL+ '/api/auth/register'
   }
 
   constructor() { }

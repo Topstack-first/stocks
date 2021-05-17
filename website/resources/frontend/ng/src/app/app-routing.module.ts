@@ -10,6 +10,10 @@ const appRoutes: Routes = [
 		path: 'stock',
 		loadChildren: () => import('./views/stock/stock.module').then(m => m.StockModule),
 	},
+    {
+		path: 'webadmin',
+		loadChildren: () => import('./views/web-admin/web-admin.module').then(m => m.WebAdminModule),
+	},
     { path: '', component: SigninComponent },
     { path: 'login', component: SigninComponent },
     { path: 'register', component: SignupComponent },

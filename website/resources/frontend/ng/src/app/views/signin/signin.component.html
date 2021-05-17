@@ -22,6 +22,7 @@
           <label>Password</label>
           <input mat-input type="password" class="form-control" formControlName="password">
       </div>
+      <mat-checkbox (click)="goToAdmin()" style="margin-top: 10px;font-size: x-small;">Go to Web Admin</mat-checkbox>
       <button type="submit" class="btn btn-block btn-primary margin-top-30">Log in</button>
     <button class="register-btn" mat-raised-button routerLink="/register">Register</button>
   </form>

@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
           this.isSignedIn = val;
           if(this.isSignedIn)
           {
-              this.router.navigate(["stock"]);
+              //this.router.navigate(["stock"]);
           }
       });
     }
