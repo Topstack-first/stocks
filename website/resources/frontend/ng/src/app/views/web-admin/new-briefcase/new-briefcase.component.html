@@ -2,62 +2,62 @@
     <button mat-raised-button class="back-btn" (click)="gotoBack()">
     Back
     </button>
-    <form fxLayout="column" style="color: silver;" (ngSubmit)="onSubmit()">
+    <form fxLayout="column" [formGroup]="submitForm" style="color: silver;" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <mat-label>NUMERO DE ORDEN</mat-label>
-            <input matInput value="" required>
+            <input matInput type="number" formControlName="order_number" value="" required>
         </mat-form-field>
         <mat-form-field>
-            <mat-label>ESTADO(dropdown)</mat-label>
-            <input matInput value="">
+            <mat-label>ESTADO</mat-label>
+            <input matInput value="" formControlName="state">
         </mat-form-field>
         <mat-form-field>
             <mat-label>PRODUCTO</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="product">
         </mat-form-field>
         <mat-form-field>
             <mat-label>TICKET</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="ticket">
         </mat-form-field>
         <mat-form-field>
             <mat-label>DERIVADO</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="derivative">
         </mat-form-field>
         <mat-form-field>
             <mat-label>LOTAJE</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="lotaje">
         </mat-form-field>
         <mat-form-field>
             <mat-label>SALDO ACTUAL</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="current_balance">
         </mat-form-field>
         <mat-form-field>
             <mat-label>INVERSION</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="investment">
         </mat-form-field>
         <mat-form-field>
             <mat-label>MARGEN DE MANTENIMIENTO</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="maintenance_margin">
         </mat-form-field>
         <mat-form-field>
             <mat-label>(LONG/SHORT)</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="long_short">
         </mat-form-field>
         <mat-form-field>
             <mat-label>PRECIO APERTURA</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="open_price">
         </mat-form-field>
         <mat-form-field>
             <mat-label>META</mat-label>
-            <input  matInput value="">
+            <input  matInput type="number" value="" formControlName="goal">
         </mat-form-field>
         <mat-form-field>
             <mat-label>STOP/LOST</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="stop_lost">
         </mat-form-field>
         <mat-form-field>
             <mat-label>FECHA APERTURA OPERACIÓN</mat-label>
-            <input type="date" matInput value="">
+            <input type="date" matInput value="" formControlName="operation_open_date">
         </mat-form-field>
         <button mat-raised-button type="submit" class="back-btn">Submit</button>
     </form>

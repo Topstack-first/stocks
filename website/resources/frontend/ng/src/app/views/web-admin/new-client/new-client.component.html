@@ -2,73 +2,73 @@
     <button mat-raised-button class="back-btn" (click)="gotoBack()">
     Back
     </button>
-    <form fxLayout="column" style="color: silver;" (ngSubmit)="onSubmit()">
+    <form fxLayout="column" [formGroup]="submitForm" style="color: silver;" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <mat-label>Nombre</mat-label>
-            <input matInput value="" required>
+            <input matInput value="" formControlName="name" required>
         </mat-form-field>
         <div fxLayout="row" fxLayoutAlign="space-around center">
             <mat-form-field style="width: 35%;">
                 <mat-label>Apellido 1</mat-label>
-                <input matInput placeholder="" value="" required>
+                <input matInput placeholder="" value="" formControlName="first_name" required>
             </mat-form-field>
             <mat-form-field style="width: 45%;">
                 <mat-label>Apellido 2</mat-label>
-                <input matInput placeholder="" value="" required>
+                <input matInput placeholder="" value="" formControlName="last_name" required>
             </mat-form-field>
         </div>
         <mat-form-field>
             <mat-label>Tipo Documento</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="document_type">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Número Documento</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="document_name">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Nacionalidad</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="nation">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Pais de Residencia</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="residence_country">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Fecha nacimiento</mat-label>
-            <input type="date" matInput value="">
+            <input type="date" matInput value="" formControlName="birthday">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Direccion</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="address">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Telefono</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="phone">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="email">
         </mat-form-field>
         <mat-form-field>
             <mat-label>PassWord</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="password">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Numero Cuenta</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="account_number">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Fecha Apertura Cuenta</mat-label>
-            <input type="date" matInput value="">
+            <input type="date" matInput value="" formControlName="account_open_date">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Saldo Inicial</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="open_balance">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Fecha Ultima Solicitud de Fondos</mat-label>
-            <input type="date" matInput value="">
+            <input type="date" matInput value="" formControlName="last_fund_date">
         </mat-form-field>
-        <button mat-raised-button type="submit" class="back-btn">Submit</button>
+        <button mat-raised-button class="back-btn">Submit</button>
     </form>
 </div>

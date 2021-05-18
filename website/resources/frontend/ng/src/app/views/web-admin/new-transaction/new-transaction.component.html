@@ -2,48 +2,50 @@
     <button mat-raised-button class="back-btn" (click)="gotoBack()">
     Back
     </button>
-    <form fxLayout="column" style="color: silver;" (ngSubmit)="onSubmit()">
+    <form fxLayout="column" [formGroup]="submitForm" style="color: silver;" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <mat-label>Tipo de Solicitud</mat-label>
-            <input matInput value="" required>
+            <input matInput value="" formControlName="request_type" required/>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Fecha Solicitud</mat-label>
-            <input type="date" matInput value="">
+            <input type="date" matInput value="" formControlName="application_date">
         </mat-form-field>
         <mat-form-field>
             <mat-label>moneda</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="currency">
         </mat-form-field>
         <mat-form-field>
             <mat-label>monto</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="amount">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Comentario</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput formControlName="comment"></textarea>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Numero Cuenta Beneficiario</mat-label>
-            <input matInput value="">
+            <input matInput type="number" value="" formControlName="beneficiary_account_number">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Direccion Beneficiario</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="beneficiary_address">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Nombre Banco Beneficiario</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="beneficiary_bank_name">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Codigo Swift Banco Beneficiario</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="swift_bank">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Direccion Banco Beneficiario</mat-label>
-            <input matInput value="">
+            <input matInput value="" formControlName="beneficiary_bank_address">
         </mat-form-field>
         <button mat-raised-button type="submit" class="back-btn">Submit</button>
     </form>
 </div>
+
+

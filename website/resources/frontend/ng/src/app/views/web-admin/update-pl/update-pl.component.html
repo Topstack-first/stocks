@@ -2,10 +2,10 @@
     <button mat-raised-button class="back-btn" (click)="gotoBack()">
     Back
     </button>
-    <form fxLayout="column" class="update-form centered" (ngSubmit)="onSubmit()">
+    <form fxLayout="column" [formGroup]="submitForm" class="update-form centered" (ngSubmit)="onSubmit()">
         <mat-form-field style="text-align: center;">
             <mat-label>VALOR DE LA CUENTA GENERAL</mat-label>
-            <input matInput value="" required>
+            <input matInput type="number" value=""  formControlName="account_value" required>
         </mat-form-field>
         <button mat-raised-button type="submit" class="back-btn">Submit</button>
     </form>

@@ -17,7 +17,7 @@ export class DetailItemComponent implements OnInit {
 
   barStyle:string = "";
   ngOnInit(): void {
-    this.barStyle = "background-color: limegreen;width: 80%;text-align:center;";
+    this.barStyle = "background-color: "+this.data.color+";width: 80%;text-align:center;";
   }
   onDetailParentView(){
     this.parentView.detailItem = this.data;

@@ -54,7 +54,7 @@ export class BriefcaseComponent implements OnInit {
   public showLegend = false;
   public gradient = true;
   public colorScheme = {
-    domain: ['#f16311','#dc873f','#dca43f','#dcb33f','#dadc3f','#83dc3f','#ea572a','#e81515','#36e3f5','#0687d2']
+    domain: ['#fd7e14','#866d27','#deaf22','#9c790d','#dadc3f','#83dc3f','#ea572a','#e81515','#36e3f5','#0687d2']
   };
   public showLabels = true;
   public explodeSlices = false;
@@ -89,6 +89,19 @@ export class BriefcaseComponent implements OnInit {
           },() => {
           }
     );
+    this.dataService.getBriefcases().subscribe(result=>{
+        console.log(result.data);
+        this.data = [];
+        result.data.forEach(item=>{
+            let percent = ((item.investment+item.maintenance_margin)/item.current_balance )*100;
+            let percentStr = percent.toFixed(1);
+            this.data.push({
+                name:item.ticket+"("+percentStr+"%)",
+                value:percentStr
+            })
+        });
+
+    })
   }
   onSelect(event: any) {
     console.log(event);

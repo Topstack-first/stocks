@@ -8,12 +8,12 @@ export interface DetailItem{
     MargenMantenimiento:any;
     BeneficioPerdida:any;
     percent:any;
- 
+
     LS:any;
     PercioApertura:any;
     Meta:any;
     StopLost:any;
     FechaApertura:any;
     NumeroOrden:any;
-    
+    color:string;
 }
